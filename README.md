@@ -5,7 +5,7 @@ My nvim config
 </div>
 
 ## Goals
-- Be minimal yet complete
+- Be visually minimal yet complete
 - Measurably improve productivity over VS Code
 - Support native macOS navigation
 
