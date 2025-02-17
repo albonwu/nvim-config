@@ -21,13 +21,26 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
 
-    -- Cosmetics
+    -- Appearance
 	use { "catppuccin/nvim", as = "catppuccin" }
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
+    use { "luukvbaal/statuscol.nvim" }
+    use {
+      "kevinhwang91/nvim-ufo",
+      requires = {
+        "kevinhwang91/promise-async",
+      }
+    }
 
     -- LSP
 	use 'neovim/nvim-lspconfig'
@@ -37,7 +50,7 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'stevearc/conform.nvim'
 
-    -- Small QoL additions
+    -- Misc.
     use "christoomey/vim-tmux-navigator"
     use {
         "windwp/nvim-autopairs",
@@ -45,12 +58,5 @@ return require('packer').startup(function(use)
             require("nvim-autopairs").setup {}
         end
     }
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons',
-        },
-    }
-
 
 end)
