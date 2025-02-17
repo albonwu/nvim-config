@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
         "kevinhwang91/promise-async",
       }
     }
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- LSP
 	use 'neovim/nvim-lspconfig'
