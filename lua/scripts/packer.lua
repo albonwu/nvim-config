@@ -34,14 +34,12 @@ return require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-    use { "luukvbaal/statuscol.nvim" }
     use {
       "kevinhwang91/nvim-ufo",
       requires = {
         "kevinhwang91/promise-async",
       }
     }
-    use "lukas-reineke/indent-blankline.nvim"
 
     -- LSP
 	use 'neovim/nvim-lspconfig'
