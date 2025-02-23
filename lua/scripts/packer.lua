@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
+    use { "luukvbaal/statuscol.nvim" }
     use {
       "kevinhwang91/nvim-ufo",
       requires = {
