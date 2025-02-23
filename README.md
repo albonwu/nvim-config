@@ -27,22 +27,25 @@ My nvim config
 
 ## Plugins
 Essentials:
-- [packer.nvim](https://github.com/wbthomason/packer.nvim)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [packer.nvim](https://github.com/wbthomason/packer.nvim) - Plugin manager.
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder over lists.
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) - File explorer.
+
+Appearance:
+- [catppuccin](https://github.com/catppuccin/nvim) - Theme.
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Better syntax highlighting and parsing.
+- [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Status column configuration.
+- [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) - Faster and improved folding experience.
+  - Requires: [promise-async](https://github.com/kevinhwang91/promise-async)
 
 LSP:
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-  
-Cosmetics:
-- [catppuccin](https://github.com/catppuccin/nvim)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quick LSP setup.
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Autocompletion framework.
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - LSP source for `nvim-cmp`.
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet engine.
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) - Completion source for LuaSnip.
+- [conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight formatter plugin.
 
-QoL additions:
-- [conform.nvim](https://github.com/stevearc/conform.nvim)
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+Miscellaneous:
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between tmux panes and nvim.
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Automatically close pairs like `()` and `""`.
