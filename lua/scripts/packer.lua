@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
         "kevinhwang91/promise-async",
       }
     }
+    use "folke/trouble.nvim"
 
     -- LSP
 	use 'neovim/nvim-lspconfig'

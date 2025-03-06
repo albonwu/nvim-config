@@ -30,9 +30,13 @@ vim.api.nvim_set_keymap("n", "c", '"_c', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })
 
 -- Integration with native MacOS shortcuts
--- Uses intermediate iTerm2 shortcuts (e.g., Cmd-s -> F6)
-vim.api.nvim_set_keymap("n", "<F6>", ":w<CR>", { noremap = true })  -- Save (n)
-vim.api.nvim_set_keymap("i", "<F6>", "<Esc>:w<CR>a", { noremap = true })  -- Save (i)
+-- Use intermediate iTerm2 shortcuts (e.g., Cmd-s -> F6)
+vim.keymap.set("n", "<F6>", function()  -- Save (n)
+    vim.cmd("w")
+end, { noremap = true, silent = true })
+vim.keymap.set("i", "<F6>", function()  -- Save (i)
+    vim.cmd("w")
+end, { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<F7>", "<C-w>", { noremap = true })  -- Delete one word (i)
 vim.api.nvim_set_keymap("i", "<F8>", "<C-u>", { noremap = true })  -- Delete line (i)
 
