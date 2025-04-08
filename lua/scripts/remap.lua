@@ -44,3 +44,6 @@ vim.api.nvim_set_keymap("i", "<F8>", "<C-u>", { noremap = true })  -- Delete lin
 vim.keymap.set({ "n", "v" }, "<leader>F", function()
     require("conform").format({ lsp_fallback = true })
 end, { desc = "Format file or selection" })
+
+vim.keymap.set("n", "<leader>xx", vim.diagnostic.setloclist)
+
