@@ -40,6 +40,7 @@ require('lspconfig').clangd.setup({
 require'lspconfig'.ts_ls.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.jdtls.setup{}
+require'lspconfig'.hls.setup{}
 
 local cmp = require('cmp')
 
