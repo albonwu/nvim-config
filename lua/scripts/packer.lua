@@ -59,5 +59,12 @@ return require('packer').startup(function(use)
             require("nvim-autopairs").setup {}
         end
     }
+    use {
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require("nvim-ts-autotag").setup()
+        end,
+        ft = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "svelte", "vue", "tsx" }
+    }
 
 end)
