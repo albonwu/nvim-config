@@ -29,11 +29,6 @@ vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "c", '"_c', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "dd", '"_dd', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "dd", '"_dd', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "cc", '"_cc', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "cc", '"_cc', { noremap = true, silent = true })
-
 vim.api.nvim_set_keymap("n", "D", '"_D', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "D", '"_D', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "C", '"_C', { noremap = true, silent = true })
