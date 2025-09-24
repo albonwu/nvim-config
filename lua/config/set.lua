@@ -1,4 +1,3 @@
--- Misc. QoL editor settings
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -23,6 +22,18 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
-vim.opt.splitright = true  
+vim.opt.splitright = true
 
 vim.opt.mousescroll = "ver:1"
+--
+-- Neovim 0.11+: virtual_text is opt-in
+vim.diagnostic.config({
+	virtual_text = {
+		spacing = 2,
+		source = "if_many",
+	},
+	underline = true,
+	signs = true,
+	severity_sort = true,
+	update_in_insert = false,
+})
