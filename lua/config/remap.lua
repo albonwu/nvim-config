@@ -57,5 +57,6 @@ vim.keymap.set({ "n", "v" }, "<leader>F", function()
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format file or selection" })
 
---vim.keymap.set("n", "<leader>xx", vim.diagnostic.setloclist)
 vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment" })
+vim.keymap.set("x", "<leader>/", "gc", { remap = true, desc = "Toggle comment" })
