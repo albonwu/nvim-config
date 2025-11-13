@@ -9,33 +9,35 @@ local colors = {
 	mantle = "#181825",
 }
 
-minimal_catppuccin.normal.a.bg = colors.surface
-minimal_catppuccin.insert.a.bg = colors.surface
-minimal_catppuccin.visual.a.bg = colors.surface
-minimal_catppuccin.replace.a.bg = colors.surface
-minimal_catppuccin.command.a.bg = colors.surface
+minimal_catppuccin.normal = {
+	a = { bg = colors.surface, fg = colors.text },
+	b = { bg = colors.mantle, fg = colors.text },
+	z = { bg = colors.mantle, fg = colors.text },
+}
 
-minimal_catppuccin.normal.a.fg = colors.text
-minimal_catppuccin.insert.a.fg = colors.text
-minimal_catppuccin.visual.a.fg = colors.text
-minimal_catppuccin.replace.a.fg = colors.text
-minimal_catppuccin.command.a.fg = colors.text
+minimal_catppuccin.insert = {
+	a = { bg = colors.surface, fg = colors.text },
+	b = { bg = colors.mantle, fg = colors.text },
+	z = { bg = colors.mantle, fg = colors.text },
+}
 
--- make section b blend in w/ status line
-minimal_catppuccin.normal.b.bg = colors.mantle
-minimal_catppuccin.insert.b.bg = colors.mantle
-minimal_catppuccin.visual.b.bg = colors.mantle
-minimal_catppuccin.replace.b.bg = colors.mantle
-minimal_catppuccin.command.b.bg = colors.mantle
+minimal_catppuccin.visual = {
+	a = { bg = colors.surface, fg = colors.text },
+	b = { bg = colors.mantle, fg = colors.text },
+	z = { bg = colors.mantle, fg = colors.text },
+}
 
-minimal_catppuccin.normal.b.fg = colors.text
-minimal_catppuccin.insert.b.fg = colors.text
-minimal_catppuccin.visual.b.fg = colors.text
-minimal_catppuccin.replace.b.fg = colors.text
-minimal_catppuccin.command.b.fg = colors.text
+minimal_catppuccin.replace = {
+	a = { bg = colors.surface, fg = colors.text },
+	b = { bg = colors.mantle, fg = colors.text },
+	z = { bg = colors.mantle, fg = colors.text },
+}
 
--- z section not defined in factory settings
-minimal_catppuccin.normal.z = { bg = colors.mantle, fg = colors.text }
+minimal_catppuccin.command = {
+	a = { bg = colors.surface, fg = colors.text },
+	b = { bg = colors.mantle, fg = colors.text },
+	z = { bg = colors.mantle, fg = colors.text },
+}
 
 return {
 	{
