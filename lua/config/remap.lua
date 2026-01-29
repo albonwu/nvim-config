@@ -8,8 +8,8 @@ vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, 
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 
 -- Pane/buffer management
-vim.keymap.set("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", '"', ":split<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "|", ":vsplit<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
 
 -- Navigate panes using Opt
@@ -52,6 +52,19 @@ end, { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<F7>", "<C-w>", { noremap = true }) -- Delete one word (i)
 vim.api.nvim_set_keymap("i", "<F8>", "<C-u>", { noremap = true }) -- Delete line (i)
 
+vim.keymap.set("n", "<leader>q", function()
+	vim.cmd("q")
+end, { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>q", function()
+	vim.cmd("q")
+end, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>Q", function()
+	vim.cmd("qa")
+end, { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>Q", function()
+	vim.cmd("qa")
+end, { noremap = true, silent = true })
+
 -- Formatting
 vim.keymap.set({ "n", "v" }, "<leader>F", function()
 	require("conform").format({ lsp_fallback = true })
@@ -60,3 +73,12 @@ end, { desc = "Format file or selection" })
 vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment" })
 vim.keymap.set("x", "<leader>/", "gc", { remap = true, desc = "Toggle comment" })
+
+-- Quick C++ compile for sprog
+-- % = full path of current file
+-- :h = truncate to parent directory
+vim.keymap.set(
+	"n",
+	"<leader>r",
+	":!g++ -std=c++17 -Wall -Wshadow -fsanitize=address,undefined % -o %:h/run && ./%:h/run < %:h/test.in <CR>"
+)
