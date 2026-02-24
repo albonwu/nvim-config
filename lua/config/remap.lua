@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = ","
 
 -- Project navigation
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
@@ -65,8 +65,12 @@ vim.keymap.set("v", "<leader>Q", function()
 	vim.cmd("qa")
 end, { noremap = true, silent = true })
 
+-- Un-stupidify search highlighting
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<localleader>r", "<cmd>GrugFar<cr>")
+
 -- Formatting
-vim.keymap.set({ "n", "v" }, "<leader>F", function()
+vim.keymap.set({ "n", "v" }, "<localleader>F", function()
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format file or selection" })
 
@@ -79,6 +83,6 @@ vim.keymap.set("x", "<leader>/", "gc", { remap = true, desc = "Toggle comment" }
 -- :h = truncate to parent directory
 vim.keymap.set(
 	"n",
-	"<leader>r",
+	"<localleader>R",
 	":!g++ -std=c++17 -Wall -Wshadow -fsanitize=address,undefined % -o %:h/run && ./%:h/run < %:h/test.in <CR>"
 )
