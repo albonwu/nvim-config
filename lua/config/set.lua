@@ -3,6 +3,12 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.cursorline = true
+
+vim.opt.undofile = true
+
+vim.opt.cmdheight = 0
+vim.opt.numberwidth = 2
 
 vim.opt.wrap = false
 
@@ -11,7 +17,7 @@ vim.opt.relativenumber = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.hlsearch = false
+-- vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
